@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {BASE_URL} from '../constraints/index.js'
 import CakeCard from './CakeCard.js'
+import Cart from './Cart.js'
 
 export default function CakeContainer() {
 
