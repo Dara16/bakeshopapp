@@ -31,6 +31,19 @@ export default function CakeContainer() {
           }
         };
 
+    const onRemove = (cake) => {
+        const exist = cartItems.find((x) => x.id === cake.id);
+        if (exist.qty === 1) {
+            setCartItems(cartItems.filter((x) => x.id !== cake.id));
+        } else {
+            setCartItems(
+                cartItems.map((x) =>
+                    x.id === cake.id ? { ...exist, qty: exist.qty - 1 } : x
+                )
+            );
+        }
+    }
+
     return(
         <div className="row">
             <div className="col-2">
@@ -42,7 +55,9 @@ export default function CakeContainer() {
               </div>
               </div>
             </div>
-
+            <div className="col-1">
+                <Cart cartItems={cartItems} onAddToCart={onAddToCart} onRemove={onRemove}/>
+            </div>
         </div>
         
     )
