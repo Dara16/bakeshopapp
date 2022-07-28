@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from './components/NavBar';
 import CakeContainer from './components/CakeContainer';
 import HomePage from './components/HomePage';
-import './App.css';
+import './index.css';
 
 export default function App() {
   return (
