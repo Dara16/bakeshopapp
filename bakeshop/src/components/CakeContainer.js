@@ -47,13 +47,12 @@ export default function CakeContainer() {
     return(
         <div className="row">
             <div className="col-2">
-              <div className="row">
-              <div className="col-1">
+
                 <h2>Cakes</h2>
                 <br />
+                <div className='cakes'>
                 {cakes && populateCakes()}
-              </div>
-              </div>
+                </div>
             </div>
             <div className="col-1">
                 <Cart cartItems={cartItems} onAddToCart={onAddToCart} onRemove={onRemove}/>

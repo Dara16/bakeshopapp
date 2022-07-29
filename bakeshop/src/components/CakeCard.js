@@ -8,7 +8,7 @@ export default function CakeCard({ cake, onAddToCart }) {
         <div className='card'>
             <div className="col">
                 <h3>{name}</h3>
-                <img src={image} width="400" height="350" alt=""/>
+                <img src={image} width="300" height="250" alt=""/>
                 <p>${(price/100).toFixed(2)}</p>            
                 <p>{description}</p>
             
